@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:shadowRadius="10"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                tools:src="@drawable/ic_launcher_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/videotitle" />
+
+            <TextView
+                android:id="@+id/videotitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Video Title"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/channelname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thumbnail" />
+
+            <TextView
+                android:id="@+id/channelname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/white"
+                tools:text="channel name"
+                android:textSize="12sp"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/videotitle" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
